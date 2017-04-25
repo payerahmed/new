@@ -1,7 +1,7 @@
 reddit.top('wallpaper').limit(12).fetch(function(res){
 
-var linkArr = res.data.children.mep(r => r.data.url);
-var nailArr = res.data.children.mep(n => n.data.thumbnail);
+var linkArr = res.data.children.map(r => r.data.url);
+var nailArr = res.data.children.map(n => n.data.thumbnail);
 
 var ul = document.querySelector('#ul');
  linkArr.forEach(function(n,i){
